@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte de Vulnerabilidades</title>
+  <link rel="stylesheet" href="css/repo_styles.css">
+
+  <!-- Prism.js para resaltado y líneas -->
+  <!-- Prism.js base -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+
+  <!-- Plugin para números de línea -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.css" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+  <!-- Funciones de análisis -->
+  <script src="js/funciones.js" defer></script>
+</head>
+<body>
+  <div class="hero">
+    <div class="navbar">
+      <h1>Reporte de Vulnerabilidades</h1>
+    </div>
+
+    <div class="container">
+      <!-- Sidebar izquierda -->
+      <div class="sidebar">
+        <div class="menu">
+          <ul id="lista-archivos">
+            <!-- Se llena dinámicamente -->
+          </ul>
+          <button onclick="mostrarGrafo()">Mostrar Flujo de Código</button>
+          <button onclick="descargarPDF()">Descargar Reporte</button>
+        </div>
+      </div>
+
+      <!-- Panel derecho -->
+      <div class="content">
+        <!-- Código fuente -->
+        <div class="code-viewer">
+          <div class="editor-header">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <pre class="line-numbers"><code id="codigo" class="language-java">// Selecciona un archivo para ver su código</code></pre>
+        </div>
+
+        <!-- Sección de vulnerabilidades y estadísticas -->
+        <div class="report-section">
+          <h2>Vulnerabilidades encontradas</h2>
+          <div id="report-container"></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
