@@ -1,4 +1,4 @@
-const backendURL = "http://localhost:8000";
+const backendURL = "https://web-production-a25d.up.railway.app";
 
 window.onload = async () => {
   const archivos = await fetchArchivos();
@@ -49,7 +49,7 @@ async function subirZip() {
 
     const json = await res.json();
 
-    // ✅ REDIRECCIÓN a reporte.html
+    // REDIRECCIÓN a reporte.html
     window.location.href = "reporte.html";
 
   } catch (error) {
@@ -125,9 +125,6 @@ async function descargarPDF() {
 }
 
 async function mostrarGrafo() {
-  const res = await fetch(`${backendURL}/grafo`);
-  if (!res.ok) {
-    alert("No se puede mostrar el grafo");
-    return;
-  }
+  window.open(`${backendURL}/grafo`, '_blank');
 }
+
