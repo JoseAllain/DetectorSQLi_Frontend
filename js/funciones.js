@@ -49,7 +49,12 @@ async function subirZip() {
 
     const json = await res.json();
 
-    // REDIRECCIÓN a reporte.html
+    if (json.status && json.status.startsWith("Estructura no válida")) {
+      console.error("Error de estructura:", json.status);
+      alert("Error de estructura: " + json.status);
+      return; 
+    }
+
     window.location.href = "reporte.html";
 
   } catch (error) {
