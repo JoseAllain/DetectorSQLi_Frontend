@@ -16,7 +16,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     color: white;
     position: relative;
   }
@@ -36,17 +35,64 @@
     position: relative;
     z-index: 2;
   }
-  .navbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  z-index: 999;
+}
+
+/* Título centrado horizontal y vertical */
+.navbar-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Botón a la derecha, centrado verticalmente */
+.navbar .btn.logout {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar .btn.logout:hover {
+  background-color: #c0392b;
+}
+
+.navbar .btn.panel {
+  position: relative;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 
   .hero h1 {
     font-size: 3.5rem;
