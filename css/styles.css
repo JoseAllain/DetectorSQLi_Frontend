@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .hero {
+    background: url('../image/inyección-SQL.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.605); /* Ajusta el nivel de oscuridad */
+    z-index: 2;
+  }
+  
+  .hero > * {
+    position: relative;
+    z-index: 2;
+  }
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  z-index: 999;
+}
+
+/* Título centrado horizontal y vertical */
+.navbar-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Botón a la derecha, centrado verticalmente */
+.navbar .btn.logout {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar .btn.logout:hover {
+  background-color: #c0392b;
+}
+
+.navbar .btn.panel {
+  position: relative;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .highlight {
+    color: #00bfa6; /* Color turquesa */
+  }
+
+  .description {
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 700px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .upload-form {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .upload-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .upload-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .upload-bar .file-select-btn {
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-bar .file-select-btn:hover {
+    background-color: #444;
+  }
+  
+  .upload-bar .file-input {
+    display: none; /* Ocultamos el input real de archivo */
+  }
+  
+  .upload-bar .file-name-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    cursor: not-allowed;
+    width: auto; /* Ajusta el tamaño al contenido */
+    max-width: 300px; /* Limita el ancho máximo si es necesario */
+    min-width: 150px; /* Establece un ancho mínimo si lo deseas */
+    white-space: nowrap; /* Evita que el texto se envuelva */
+    overflow: hidden; /* Oculta el texto si es muy largo */
+    text-overflow: ellipsis; /* Agrega "..." si el texto es más largo que el contenedor */
+  }
+  
+  .upload-bar button {
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-bar button:hover {
+    background-color: #444;
+  }
